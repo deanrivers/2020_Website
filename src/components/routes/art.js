@@ -1,7 +1,21 @@
 import React from 'react'
 import Gallery from 'react-photo-gallery'
+import { useSpring,animated } from 'react-spring'
+import { Carousel } from 'react-responsive-carousel'
+
+import 'pure-react-carousel/dist/react-carousel.es.css';
+ 
 
 const Art = () => {
+
+    const fade = useSpring({
+        from:{
+            opacity:'0'
+        },
+        to:{
+            opacity:'1'
+        }
+    })
 
     const photos = [
         {
@@ -56,9 +70,9 @@ const Art = () => {
     
     ]
     return(
-        <div className="page-container">
+        <animated.div className="page-container" style={fade}>
             <div className="title-container">
-                <p className="title">/Art</p>
+                <p className="title"><span className="blue">/</span>Art</p>
             </div>
             <div className="sub-categories">
                 <p>Visuals / Photography / Music</p>
@@ -68,7 +82,7 @@ const Art = () => {
 
             <div className="master-content-container">
 
-                <div id="photo=container">
+                <div id="photo-container">
                     <div className="content-child">
                         <p>Photography</p>
                     </div>
@@ -84,7 +98,7 @@ const Art = () => {
 
                 
 
-                <div id="music-container">
+                <div id="master-music-container">
                     <div className="content-child">
                         <p>Music</p>
                     </div>
@@ -94,29 +108,28 @@ const Art = () => {
                     </div>
                     <hr/>
 
-
-                    <div id="master-music-container">
-                        {musicPlayers.map( (data,index) =>{
-                            return(
-                                <div className="child-music-container">
-                                    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src={data.src}></iframe>
-                                    <div className="sc-player">
-                                        <a href={data.profileURL} title={data.arist} target="_blank">rvsl -</a> 
-                                        <a href={data.songURL} title={data.title} target="_blank">{data.title}</a>
+                    <div className="carousel-container">
+                        {/* <Carousel> */}
+                            {musicPlayers.map( (data,index) =>{
+                                return(
+                                    
+                                    <div index={index}>
+                                        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src={data.src}></iframe>
+                                        <div className="sc-player">
+                                            <a href={data.profileURL} title={data.arist} target="_blank">rvsl -</a> 
+                                            <a href={data.songURL} title={data.title} target="_blank">{data.title}</a>
+                                        </div>
                                     </div>
-                                </div>
-                            )
-                        })}
+                                    )
+                            })}
+                        {/* </Carousel> */}
                     </div>
+                        
+                    
 
                 </div>
             </div>
-
-            
-            
-
-            
-        </div>
+        </animated.div>
     )
 }
 

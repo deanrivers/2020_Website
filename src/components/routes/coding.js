@@ -1,16 +1,28 @@
 import React from 'react'
+import {useSpring,animated} from 'react-spring'
+
 
 const Coding = () =>{
-    console.log('cccc')
+    
+
+    const fade = useSpring({
+        from:{
+            opacity:'0'
+        },
+        to:{
+            opacity:'1'
+        }
+    })
+
     return(
-        <div className="page-container">
+        <animated.div className="page-container" style={fade}>
             <div className="title-container">
-                <p className="title">/Coding</p>
+                <p className="title"><span className="red">/</span>Coding</p>
             </div>
             <div className="sub-categories">
                 <p>Bots / Scripts / Web Development</p>
             </div>
-        </div>
+        </animated.div>
     )
 }
 
