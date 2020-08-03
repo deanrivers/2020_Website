@@ -1,26 +1,39 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Home from './components/home'
+import Art from './components/routes/art'
+import Hamburger from './components/hamburger'
+import Coding from './components/routes/coding'
+import Contact from './components/routes/contact'
+import Education from './components/routes/education'
+import Social from './components/socials'
+import YouTube from './components/youtube'
+
+const App = () => {
+  return ([
+    
+    <Router>
+      <Switch>
+        <Route path="/" component={Home} exact/>
+        <Route path="/home" component={Home}/>
+        <Route path="/coding" component={Coding}/>
+        <Route path="/art" component={Art}/>
+        <Route path="/education" component={Education}/>
+        <Route path="/contact" component={Contact}/>
+        
+      </Switch>
+      <Hamburger/>
+    </Router>,
+    
+
+
+
+  ]);
 }
+
+
 
 export default App;

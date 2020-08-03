@@ -78,7 +78,7 @@ const Art = () => {
                 <p>Visuals / Photography / Music</p>
             </div>
 
-            <hr/>
+            
 
             <div className="master-content-container">
 
