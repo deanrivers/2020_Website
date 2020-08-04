@@ -6,7 +6,7 @@
 
 html,body{
   box-sizing: border-box;
-  background-color: rgb(0, 0, 0);
+  background-color: #151515;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   margin: 0 auto
@@ -461,4 +461,72 @@ hr{
 
 .carousel{
   background-color: #cccccc;
+}
+
+/* fade in sections */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+/* coding page */
+.main-card-container{
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card-child{
+  max-width: 400px;
+  min-height:500px;
+  padding: 2%;
+  margin: 2%;
+  background-color: #2b2b2b;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid #eaeade; */
+  /* border-radius: 5px; */
+  color: white;
+  transition: 0.5s;
+}
+
+.card-child:hover{
+  transform: translateY(-10px);
+  box-shadow: -0px 35px 35px 10px #000000;
+}
+
+.card-child > img{
+  opacity: 0.7;
+  width: 40%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card-child img:hover{
+  opacity: 1;
+}
+
+.language-container{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+}
+
+.card-language-image{
+  width: 10%;
+  margin: 2%;
 }

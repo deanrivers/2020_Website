@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 
 import Home from './components/home'
 import Art from './components/routes/art'
@@ -23,6 +23,10 @@ const App = () => {
         <Route path="/art" component={Art}/>
         <Route path="/education" component={Education}/>
         <Route path="/contact" component={Contact}/>
+
+        <Route exact path="/2020_Website">
+          <Redirect to={Home}/>
+        </Route>
         
       </Switch>
       <Hamburger/>

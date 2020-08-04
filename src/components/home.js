@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import {useSpring, animated, config} from 'react-spring'
 import {NavLink} from 'react-router-dom'
 import Social from './socials'
@@ -84,6 +84,27 @@ const Home = () =>{
         delay:400
     })
 
+    const FadeInSection = (props) => {
+        const [isVisible, setVisible] = React.useState(false);
+        const domRef = React.useRef();
+        React.useEffect(() => {
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => setVisible(entry.isIntersecting));
+          });
+          observer.observe(domRef.current);
+        }, []);
+        return (
+          <div
+            className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+            ref={domRef}
+          >
+            {props.children}
+          </div>
+        );
+      }
+
+
+
 
 
     return(
@@ -92,10 +113,8 @@ const Home = () =>{
                 <div className="title-container">
                     <div>
                         <p className="title">Dr<span className="dot-animation" style={{color:'#ff0044'}}>.</span>io</p>
-                        
                     </div>
                     
-    
                 </div>
                 
                 <div id="about-container">
@@ -116,7 +135,6 @@ const Home = () =>{
                     <div>
                         <NavLink to="/coding"><p className="link" id="red-hover">/Coding</p></NavLink>
                     </div>
-                    
                 </animated.div>
 
                 <animated.div id="art" className="nav-child" style={slideIn2}>
@@ -141,49 +159,60 @@ const Home = () =>{
                     </div>
                 </animated.div>
             </div>
+            
+            <FadeInSection>
+                <div>
+                    <hr style={{border:'3px solid #eaeade'}}/>
+                    <p id="page-break-text">Engineer & Creative.</p>
+                    <hr style={{border:'3px solid #eaeade'}}/>
+                </div>
+            </FadeInSection>
 
-            <hr style={{border:'3px solid #eaeade'}}/>
-            {/* <p id="page-break-text">&copy;om&#8707; &copy;&#174;e&#8704;te</p> */}
-            <p id="page-break-text">Engineer & Creative.</p>
-            <hr style={{border:'3px solid #eaeade'}}/>
-            <div className="row" >
-                <div id="about">
-                    <p>About</p>
-                    <div className="sub-categories">
-                        <p>Me / What I'm Into</p>
-                        <hr style={{marginTop:'0'}}/>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
-                            It has roots in a piece of classical Latin literature from 45 BC,
-                            making it over 2000 years old. Richard McClintock, a Latin professor
-                            at Hampden-Sydney College in Virginia, looked up one of the more obscure
-                            Latin words, consectetur, from a Lorem Ipsum passage, and going through
-                            the cites of the word in classical literature, discovered the undoubtable
-                            source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-                            Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in
-                            45 BC. This book is a treatise on the theory of ethics, very popular during
-                            the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
-                            comes from a line in section 1.10.32.</p>
+            
+
+            
+            <FadeInSection>
+                <div className="row">
+                
+                    <div>
+                        <p>About</p>
+                        <div className="sub-categories">
+                            {/* <p>Me / What I'm Into</p> */}
+                            <hr style={{marginTop:'0'}}/>
+                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
+                                It has roots in a piece of classical Latin literature from 45 BC,
+                                making it over 2000 years old. Richard McClintock, a Latin professor
+                                at Hampden-Sydney College in Virginia, looked up one of the more obscure
+                                Latin words, consectetur, from a Lorem Ipsum passage, and going through
+                                the cites of the word in classical literature, discovered the undoubtable
+                                source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
+                                Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in
+                                45 BC. This book is a treatise on the theory of ethics, very popular during
+                                the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
+                                comes from a line in section 1.10.32.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>About</p>
+                        <div className="sub-categories">
+                            {/* <p>Classes / Giving Back</p> */}
+                            <hr style={{marginTop:'0'}}/>
+                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
+                                It has roots in a piece of classical Latin literature from 45 BC,
+                                making it over 2000 years old. Richard McClintock, a Latin professor
+                                at Hampden-Sydney College in Virginia, looked up one of the more obscure
+                                Latin words, consectetur, from a Lorem Ipsum passage, and going through
+                                the cites of the word in classical literature, discovered the undoubtable
+                                source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
+                                Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in
+                                45 BC. This book is a treatise on the theory of ethics, very popular during
+                                the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
+                                comes from a line in section 1.10.32.</p>
+                        </div>
                     </div>
                 </div>
-                <div id="something">
-                    <p>About</p>
-                    <div className="sub-categories">
-                        <p>Classes / Giving Back</p>
-                        <hr style={{marginTop:'0'}}/>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
-                            It has roots in a piece of classical Latin literature from 45 BC,
-                            making it over 2000 years old. Richard McClintock, a Latin professor
-                            at Hampden-Sydney College in Virginia, looked up one of the more obscure
-                            Latin words, consectetur, from a Lorem Ipsum passage, and going through
-                            the cites of the word in classical literature, discovered the undoubtable
-                            source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-                            Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in
-                            45 BC. This book is a treatise on the theory of ethics, very popular during
-                            the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
-                            comes from a line in section 1.10.32.</p>
-                    </div>
-                </div>
-            </div>
+            </FadeInSection>
         </animated.div>
     )
 }
