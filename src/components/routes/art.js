@@ -51,7 +51,7 @@ const Art = () => {
 
       
           
-      ];
+    ];
 
       const musicPlayers = [{
           artist:'rvsl',
