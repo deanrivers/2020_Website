@@ -70,8 +70,8 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10%;
-  margin-bottom: 20%;
+  margin-top:15%;
+  margin-bottom:15%;
   flex-wrap: wrap;
 }
 
@@ -259,8 +259,8 @@ hr{
 
 #hamburger-container{
   position: absolute;
-  top: 3%;
-  right: 3%;
+  top: 5%;
+  right: 5%;
   cursor: pointer;
   z-index: 1000;
   position: fixed;
@@ -348,6 +348,10 @@ hr{
   /* transition: 0.3s ease-in-out; */
 }
 
+.slidebar-menu-items p{
+  font-size: 3rem;
+}
+
 .slidebar-menu-items:hover{
   
 }
@@ -424,7 +428,7 @@ hr{
 /* youtube */
 #youtube-container{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   margin-bottom: 5%;
 }
@@ -500,6 +504,7 @@ hr{
   padding: 5%;
   transition: 0.2s;
   cursor: pointer;
+  margin: 5%;
 }
 
 .card-button:hover{
@@ -522,15 +527,15 @@ hr{
   justify-content: center;
   align-items: center;
   /* border: 1px solid #eaeade; */
-  /* border-radius: 5px; */
+  border-radius: 0px;
   color: #eaeade;
-  
+  box-shadow: 0px 1px 0px 0px #040404;
   transition: 0.2s;
 }
 
 .card-child:hover{
   transform: translateY(-5px);
-  box-shadow: 0px 20px 50px 10px #040404;
+  box-shadow: 10px 10px 0px 0px #040404;
 }
 
 .card-child > img{
@@ -561,17 +566,21 @@ hr{
 
 
 /* media queries */
-@media only screen and (max-width:1000px){
+@media only screen and (max-width:700px){
 
   body,html{
     font-size: 6px;
   }
-
-  /* .title{
-    font-size: 5rem;
-  } */
-
   .row{
     flex-wrap:wrap
+  }
+  .page-container{
+    margin: 10%;
+  }
+  .sub-categories p{
+    font-size: 2rem;
+  }
+  .slidebar-menu-items p{
+    font-size: 5rem;
   }
 }

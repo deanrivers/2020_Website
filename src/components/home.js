@@ -154,26 +154,20 @@ const Home = () =>{
                 <animated.div id="contact" className="nav-child" style={slideIn4}> 
                     <div>
                         <NavLink to="/contact"><p className="link" id="green-hover">/Contact</p></NavLink>
-                        
-                        
                     </div>
                 </animated.div>
             </div>
-            
+
             <FadeInSection>
                 <div>
-                    {/* <hr style={{border:'3px solid #eaeade'}}/> */}
+                    <hr style={{border:'3px solid rgb(99, 99, 99)',opacity:'1'}}/>
                     <p id="page-break-text">Engineer Creative.</p>
-                    {/* <hr style={{border:'3px solid #eaeade'}}/> */}
+                    <hr style={{border:'3px solid rgb(99, 99, 99)',opacity:'1'}}/>
                 </div>
             </FadeInSection>
 
-            
-
-            
             <FadeInSection>
                 <div className="row">
-                
                     <div>
                         <p>About</p>
                         <div className="sub-categories">

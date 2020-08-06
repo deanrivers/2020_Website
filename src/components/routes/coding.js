@@ -37,7 +37,6 @@ const Coding = () =>{
 ]
 
     const [cards,updateCards] = useState(cardObj)
-    
 
     const fade = useSpring({
         from:{
@@ -87,8 +86,9 @@ const Coding = () =>{
                         </div>
                     )
                 })}
-
             </div>
+
+    
 
             
         </animated.div>

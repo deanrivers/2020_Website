@@ -4,6 +4,8 @@ import { useSpring,animated } from 'react-spring'
 import { Carousel } from 'react-responsive-carousel'
 
 import 'pure-react-carousel/dist/react-carousel.es.css';
+
+import Youtube from '../youtube'
  
 
 const Art = () => {
@@ -90,13 +92,8 @@ const Art = () => {
                     <div className="sub-categories">
                         <a href="https://instagram.com/your.vue" target="_blank"><p>Follow on Instagram</p></a>
                     </div>
-                    <hr/>
                     <Gallery photos={photos} direction="row"/>
                 </div>
-
-                
-
-                
 
                 <div id="master-music-container">
                     <div className="content-child">
@@ -106,7 +103,6 @@ const Art = () => {
                     <div className="sub-categories">
                         <a href="https://instagram.com/rvslmusic" target="_blank"><p>Follow on Instagram</p></a>
                     </div>
-                    <hr/>
 
                     <div className="carousel-container">
                         {/* <Carousel> */}
@@ -124,6 +120,16 @@ const Art = () => {
                             })}
                         {/* </Carousel> */}
                     </div>
+
+                    <div className="content-child">
+                        <p>Videos</p>
+                    </div>
+
+                    <div className="sub-categories">
+                        <a href="https://www.youtube.com/user/dustierthunder/" target="_blank"><p>Watch on YouTube</p></a>
+                    </div>
+
+                    <Youtube/>
                         
                     
 
