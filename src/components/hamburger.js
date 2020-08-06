@@ -21,9 +21,9 @@ const Hamburger = () =>{
             <HamburgerMenu
                 isOpen={hamburgerToggle}
                 menuClicked={()=>updateHamburger(!hamburgerToggle)}
-                width={40}
+                width={30}
                 height={20}
-                strokeWidth={1}
+                strokeWidth={3}
                 rotate={0}
                 color='#eaeade'
                 borderRadius={0}

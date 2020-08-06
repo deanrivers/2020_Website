@@ -128,7 +128,7 @@ const Home = () =>{
                     
                 </div>
             </div>
-            <hr/>
+            {/* <hr/> */}
 
             <div className="row" id="nav-container">
                 <animated.div id="info" style={slideIn1}>
@@ -162,9 +162,9 @@ const Home = () =>{
             
             <FadeInSection>
                 <div>
-                    <hr style={{border:'3px solid #eaeade'}}/>
-                    <p id="page-break-text">Engineer & Creative.</p>
-                    <hr style={{border:'3px solid #eaeade'}}/>
+                    {/* <hr style={{border:'3px solid #eaeade'}}/> */}
+                    <p id="page-break-text">Engineer Creative.</p>
+                    {/* <hr style={{border:'3px solid #eaeade'}}/> */}
                 </div>
             </FadeInSection>
 
@@ -178,7 +178,7 @@ const Home = () =>{
                         <p>About</p>
                         <div className="sub-categories">
                             {/* <p>Me / What I'm Into</p> */}
-                            <hr style={{marginTop:'0'}}/>
+                            {/* <hr style={{marginTop:'0'}}/> */}
                             <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
                                 It has roots in a piece of classical Latin literature from 45 BC,
                                 making it over 2000 years old. Richard McClintock, a Latin professor
@@ -197,7 +197,7 @@ const Home = () =>{
                         <p>About</p>
                         <div className="sub-categories">
                             {/* <p>Classes / Giving Back</p> */}
-                            <hr style={{marginTop:'0'}}/>
+                            {/* <hr style={{marginTop:'0'}}/> */}
                             <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
                                 It has roots in a piece of classical Latin literature from 45 BC,
                                 making it over 2000 years old. Richard McClintock, a Latin professor
