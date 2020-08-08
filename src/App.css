@@ -536,7 +536,7 @@ hr{
 
 .card-child:hover{
   transform: translateY(-5px);
-  box-shadow: 10px 10px 0px 0px #040404;
+  box-shadow: 2px 10px 10px 0px #040404;
 }
 
 .card-child > img{

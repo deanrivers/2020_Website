@@ -109,7 +109,7 @@ const Art = () => {
                             {musicPlayers.map( (data,index) =>{
                                 return(
                                     
-                                    <div index={index}>
+                                    <div key={index}>
                                         <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src={data.src}></iframe>
                                         <div className="sc-player">
                                             <a href={data.profileURL} title={data.arist} target="_blank">rvsl -</a> 

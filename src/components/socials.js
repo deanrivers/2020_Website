@@ -6,11 +6,6 @@ import FontAwesome from 'react-fontawesome'
 const Social = () =>{
     return(
         <div id="social-container">
-        
-            {/* <div><img src="https://w7.pngwing.com/pngs/196/34/png-transparent-white-plains-yonkers-whole-foods-market-instagram-logo-black-and-white-logo-miscellaneous-angle-white.png"></img></div> */}
-             
-
-            
             <FontAwesome
                 name="instagram"
                 className='fa-icon'

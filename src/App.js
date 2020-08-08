@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
@@ -12,7 +12,13 @@ import Education from './components/routes/education'
 import Social from './components/socials'
 import YouTube from './components/youtube'
 
+
 const App = () => {
+
+  useState(()=>{
+    console.log('hi')
+  },[])
+
   return ([
     
     <Router>
@@ -25,7 +31,7 @@ const App = () => {
         <Route path="/contact" component={Contact}/>
 
         <Route exact path="/2020_Website">
-          <Redirect to={Home}/>
+          <Redirect to="/" />
         </Route>
         
       </Switch>
