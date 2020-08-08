@@ -73,7 +73,7 @@ const Coding = () =>{
                             <img src={item.image}/>
                             <br/>
                             <hr style={{border:' 1px solid #eaeade'}}/>
-                            <p>{item.description}</p>
+                            <p className="card-child-description">{item.description}</p>
                             
                             <div className="language-container">
                                 {item.languages.map( (item,index) => {

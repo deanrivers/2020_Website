@@ -188,7 +188,7 @@ const Home = () =>{
                     </div>
 
                     <div>
-                        <p>About</p>
+                        <p>Notable Stuff</p>
                         <div className="sub-categories">
                             {/* <p>Classes / Giving Back</p> */}
                             {/* <hr style={{marginTop:'0'}}/> */}
