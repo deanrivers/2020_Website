@@ -1,30 +1,31 @@
 {
   "files": {
-    "main.css": "/2020_Website/static/css/main.ff4be4c2.chunk.css",
-    "main.js": "/2020_Website/static/js/main.5e635c4e.chunk.js",
-    "main.js.map": "/2020_Website/static/js/main.5e635c4e.chunk.js.map",
+    "main.css": "/2020_Website/static/css/main.7ee312f6.chunk.css",
+    "main.js": "/2020_Website/static/js/main.00624045.chunk.js",
+    "main.js.map": "/2020_Website/static/js/main.00624045.chunk.js.map",
     "runtime-main.js": "/2020_Website/static/js/runtime-main.8c5abe3d.js",
     "runtime-main.js.map": "/2020_Website/static/js/runtime-main.8c5abe3d.js.map",
     "static/css/2.1a0a2c47.chunk.css": "/2020_Website/static/css/2.1a0a2c47.chunk.css",
-    "static/js/2.d7b923ad.chunk.js": "/2020_Website/static/js/2.d7b923ad.chunk.js",
-    "static/js/2.d7b923ad.chunk.js.map": "/2020_Website/static/js/2.d7b923ad.chunk.js.map",
+    "static/js/2.51c7c710.chunk.js": "/2020_Website/static/js/2.51c7c710.chunk.js",
+    "static/js/2.51c7c710.chunk.js.map": "/2020_Website/static/js/2.51c7c710.chunk.js.map",
     "index.html": "/2020_Website/index.html",
-    "precache-manifest.cd59dbf2f308221967b90008de53af3f.js": "/2020_Website/precache-manifest.cd59dbf2f308221967b90008de53af3f.js",
+    "precache-manifest.718b909bab920d0a960e4e1c8216b3ea.js": "/2020_Website/precache-manifest.718b909bab920d0a960e4e1c8216b3ea.js",
     "service-worker.js": "/2020_Website/service-worker.js",
     "static/css/2.1a0a2c47.chunk.css.map": "/2020_Website/static/css/2.1a0a2c47.chunk.css.map",
-    "static/css/main.ff4be4c2.chunk.css.map": "/2020_Website/static/css/main.ff4be4c2.chunk.css.map",
-    "static/js/2.d7b923ad.chunk.js.LICENSE.txt": "/2020_Website/static/js/2.d7b923ad.chunk.js.LICENSE.txt",
+    "static/css/main.7ee312f6.chunk.css.map": "/2020_Website/static/css/main.7ee312f6.chunk.css.map",
+    "static/js/2.51c7c710.chunk.js.LICENSE.txt": "/2020_Website/static/js/2.51c7c710.chunk.js.LICENSE.txt",
     "static/media/apex.jpg": "/2020_Website/static/media/apex.933ec3e6.jpg",
     "static/media/local_pitch.png": "/2020_Website/static/media/local_pitch.862e195a.png",
     "static/media/logo.svg": "/2020_Website/static/media/logo.5d5d9eef.svg",
+    "static/media/ninja.png": "/2020_Website/static/media/ninja.70bf3cca.png",
     "static/media/python.png": "/2020_Website/static/media/python.8f63cf02.png",
     "static/media/react.jpg": "/2020_Website/static/media/react.b42e1805.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.8c5abe3d.js",
     "static/css/2.1a0a2c47.chunk.css",
-    "static/js/2.d7b923ad.chunk.js",
-    "static/css/main.ff4be4c2.chunk.css",
-    "static/js/main.5e635c4e.chunk.js"
+    "static/js/2.51c7c710.chunk.js",
+    "static/css/main.7ee312f6.chunk.css",
+    "static/js/main.00624045.chunk.js"
   ]
 }
