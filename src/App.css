@@ -514,7 +514,8 @@ hr{
 
 .card-child{
   max-width: 350px;
-  padding: 5%;
+  height: 70vh;
+  padding: 2%;
   text-align: center;
   margin: 3%;
   margin-left: 0;
@@ -530,6 +531,9 @@ hr{
   color: #eaeade;
   box-shadow: 0px 1px 0px 0px #040404;
   transition: 0.2s;
+
+  width: 400px;
+  height: 500px;
 }
 
 
@@ -565,6 +569,13 @@ hr{
   border-radius: 5px;
 }
 
+footer{
+  text-align: center;
+  color: white;
+  padding: 5%;
+  background-color: #000000;
+}
+
 
 
 /* media queries */
@@ -587,5 +598,8 @@ hr{
   }
   .card-child-description{
     font-size: 2rem;
+  }
+  .card-child{
+    height: 50vh;
   }
 }

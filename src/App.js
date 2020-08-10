@@ -11,6 +11,7 @@ import Contact from './components/routes/contact'
 import Education from './components/routes/education'
 import Social from './components/socials'
 import YouTube from './components/youtube'
+import Footer from './components/footer'
 
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
       </Switch>
       <Hamburger/>
     </Router>,
+    <Footer/>
     
 
 

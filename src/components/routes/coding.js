@@ -4,6 +4,7 @@ import {useSpring,animated, useSprings} from 'react-spring'
 //images
 import apexImage from '../../assets/project-images/apex.jpg'
 import localPitchImage from '../../assets/project-images/local_pitch.png'
+import ninjaImage from '../../assets/project-images/ninja.png'
 
 //language images
 import pythonImage from '../../assets/program-icons/python.png'
@@ -28,11 +29,11 @@ const Coding = () =>{
             languages:[reactImage]
         },
         {
-            title:'Apex Legends Bot',
-            image:apexImage,
-            description:'The Apex Legends Stats Twitter Bot provides player statistics based on information provided in a receieved tweet/mention. This bot currently lives on a Raspberry Pi and was built using Python & RESTful APIs.',
-            link:'',
-            languages:[pythonImage,reactImage]
+            title:'Decoded',
+            image:ninjaImage,
+            description:'Common misconception: "Coding is too hard for me to learn!". Decoded is dedicated in breaking that stigma. Decoded is also dedicated to helping local businesses get their brands and names on the web.',
+            link:'https://decoded.ninja/',
+            languages:[]
         },
 ]
 
@@ -74,6 +75,8 @@ const Coding = () =>{
                             <br/>
                             <hr style={{border:' 1px solid #eaeade'}}/>
                             <p className="card-child-description">{item.description}</p>
+
+                            
                             
                             <div className="language-container">
                                 {item.languages.map( (item,index) => {
@@ -82,7 +85,7 @@ const Coding = () =>{
                                     )
                                 })}
                             </div>
-                            <button className="card-button">See More</button>
+                            <button className="card-button"><a href={item.link} target="_blank">See More</a></button>
                         </div>
                     )
                 })}
