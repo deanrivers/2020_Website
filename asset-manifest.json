@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/2020_Website/static/css/main.7ee312f6.chunk.css",
-    "main.js": "/2020_Website/static/js/main.00624045.chunk.js",
-    "main.js.map": "/2020_Website/static/js/main.00624045.chunk.js.map",
+    "main.css": "/2020_Website/static/css/main.50a45be5.chunk.css",
+    "main.js": "/2020_Website/static/js/main.e7fe1f0f.chunk.js",
+    "main.js.map": "/2020_Website/static/js/main.e7fe1f0f.chunk.js.map",
     "runtime-main.js": "/2020_Website/static/js/runtime-main.8c5abe3d.js",
     "runtime-main.js.map": "/2020_Website/static/js/runtime-main.8c5abe3d.js.map",
     "static/css/2.1a0a2c47.chunk.css": "/2020_Website/static/css/2.1a0a2c47.chunk.css",
-    "static/js/2.51c7c710.chunk.js": "/2020_Website/static/js/2.51c7c710.chunk.js",
-    "static/js/2.51c7c710.chunk.js.map": "/2020_Website/static/js/2.51c7c710.chunk.js.map",
+    "static/js/2.3e43df41.chunk.js": "/2020_Website/static/js/2.3e43df41.chunk.js",
+    "static/js/2.3e43df41.chunk.js.map": "/2020_Website/static/js/2.3e43df41.chunk.js.map",
     "index.html": "/2020_Website/index.html",
-    "precache-manifest.718b909bab920d0a960e4e1c8216b3ea.js": "/2020_Website/precache-manifest.718b909bab920d0a960e4e1c8216b3ea.js",
+    "precache-manifest.4cbea8897eaa7648f2bc269fb54da180.js": "/2020_Website/precache-manifest.4cbea8897eaa7648f2bc269fb54da180.js",
     "service-worker.js": "/2020_Website/service-worker.js",
     "static/css/2.1a0a2c47.chunk.css.map": "/2020_Website/static/css/2.1a0a2c47.chunk.css.map",
-    "static/css/main.7ee312f6.chunk.css.map": "/2020_Website/static/css/main.7ee312f6.chunk.css.map",
-    "static/js/2.51c7c710.chunk.js.LICENSE.txt": "/2020_Website/static/js/2.51c7c710.chunk.js.LICENSE.txt",
+    "static/css/main.50a45be5.chunk.css.map": "/2020_Website/static/css/main.50a45be5.chunk.css.map",
+    "static/js/2.3e43df41.chunk.js.LICENSE.txt": "/2020_Website/static/js/2.3e43df41.chunk.js.LICENSE.txt",
     "static/media/apex.jpg": "/2020_Website/static/media/apex.933ec3e6.jpg",
     "static/media/local_pitch.png": "/2020_Website/static/media/local_pitch.862e195a.png",
     "static/media/logo.svg": "/2020_Website/static/media/logo.5d5d9eef.svg",
@@ -24,8 +24,8 @@
   "entrypoints": [
     "static/js/runtime-main.8c5abe3d.js",
     "static/css/2.1a0a2c47.chunk.css",
-    "static/js/2.51c7c710.chunk.js",
-    "static/css/main.7ee312f6.chunk.css",
-    "static/js/main.00624045.chunk.js"
+    "static/js/2.3e43df41.chunk.js",
+    "static/css/main.50a45be5.chunk.css",
+    "static/js/main.e7fe1f0f.chunk.js"
   ]
 }
