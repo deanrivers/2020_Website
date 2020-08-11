@@ -161,7 +161,7 @@ const Home = () =>{
             <FadeInSection>
                 <div>
                     <hr style={{border:'3px solid rgb(99, 99, 99)',opacity:'1'}}/>
-                    <p id="page-break-text">Engineer Creative.</p>
+                    <p id="page-break-text">Engineer. Creative.</p>
                     <hr style={{border:'3px solid rgb(99, 99, 99)',opacity:'1'}}/>
                 </div>
             </FadeInSection>

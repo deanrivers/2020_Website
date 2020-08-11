@@ -433,6 +433,14 @@ hr{
   margin-bottom: 5%;
 }
 
+#youtube-container iframe{
+  /* width: 100%; */
+}
+
+.photo-child-container img{
+  width: 50%;
+}
+
 .content-child p{
   color: #eaeade;
   font-size: 5rem;
@@ -471,6 +479,20 @@ hr{
 
 .carousel{
   background-color: #cccccc;
+}
+
+.carousel-root{
+  /* border: 5px solid #FF5836;
+  border: 5px solid red; */
+}
+
+.carousel-slide iframe{
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+.cookiePolicy{
+  display: none !important;
 }
 
 /* fade in sections */
@@ -579,7 +601,7 @@ footer{
   text-align: center;
   color: white;
   padding: 5%;
-  background-color: #000000;
+  background-color: #080808;
 }
 
 
@@ -609,5 +631,11 @@ footer{
     /* height: 50vh; */
     padding: 5%;
     /* margin: 0 auto; */
+  }
+  footer{
+    font-size: 2rem !important;
+  }
+  #youtube-container iframe{
+    width: 100%;
   }
 }

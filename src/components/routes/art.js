@@ -4,6 +4,7 @@ import { useSpring,animated } from 'react-spring'
 import { Carousel } from 'react-responsive-carousel'
 
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import Youtube from '../youtube'
  
@@ -21,41 +22,52 @@ const Art = () => {
 
     const photos = [
         {
-            src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
-            width: 5,
-            height: 3
-          },
-          {
-            src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
-            width: 1,
-            height: 1
-          },
-          {
-            src: "https://source.unsplash.com/qDkso9nvCg0/600x799",
-            width: 3,
-            height: 4
-          },
-          {
-            src: "https://source.unsplash.com/iecJiKe_RNg/600x799",
-            width: 3,
-            height: 4
-          },
-          {
-            src: "https://source.unsplash.com/epcsn8Ed8kY/600x799",
-            width: 3,
-            height: 4
-          },
-          {
-            src: "https://source.unsplash.com/NQSWvyVRIJk/800x599",
-            width: 4,
-            height: 3
-          },
-
-      
-          
+            src: require('../../assets/yv-images/1.jpg'),
+        },
+        {
+            src: require('../../assets/yv-images/2.jpg'),
+        },
+        {
+            src: require('../../assets/yv-images/3.jpg'),
+        },
+        {
+            src: require('../../assets/yv-images/4.jpg'),
+        },
+        {
+            src: require('../../assets/yv-images/5.jpg'),
+        },
+        {
+            src: require('../../assets/yv-images/6.jpg'),
+        },
+        {
+            src: require('../../assets/yv-images/7.jpg'),
+        },
+        {
+            src: require('../../assets/yv-images/8.jpg'),
+        },
+        {
+            src: require('../../assets/yv-images/9.jpg'),
+        },
+        {
+            src: require('../../assets/yv-images/10.jpg'),
+        },
+        {
+            src: require('../../assets/yv-images/11.jpg'),
+        },
+        {
+            src: require('../../assets/yv-images/12.jpg'),
+        },
+        {
+            src: require('../../assets/yv-images/13.jpg'),
+        },
+        {
+            src: require('../../assets/yv-images/14.jpg'),
+        },
+        {
+            src: require('../../assets/yv-images/15.jpg'),
+        },
     ];
-
-      const musicPlayers = [{
+    const musicPlayers = [{
           artist:'rvsl',
           title:'What Day Is It',
           src:'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/857454568&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true',
@@ -76,11 +88,6 @@ const Art = () => {
             <div className="title-container">
                 <p className="title"><span className="blue">/</span>Art</p>
             </div>
-            <div className="sub-categories">
-                <p>Visuals / Photography / Music</p>
-            </div>
-
-            
 
             <div className="master-content-container">
 
@@ -92,7 +99,26 @@ const Art = () => {
                     <div className="sub-categories">
                         <a href="https://instagram.com/your.vue" target="_blank"><p>Follow on Instagram</p></a>
                     </div>
-                    <Gallery photos={photos} direction="row"/>
+                    {/* <Gallery photos={photos} direction="row"/> */}
+                    <Carousel
+                        showArrows={true}
+                        showIndicators={false}
+                        showThumbs={false}
+                        showStatus={false}
+                        autoPlay={true}
+                        infiniteLoop={true}
+                        interval={5000}
+                        swipeable={true}
+                    >
+                        {photos.map( (item,index)=> {
+                            return(
+                                <div className="photo-child-container" key={index}>
+                                    <img src={item.src}/>
+                                </div>
+                            )
+                        })}
+                    </Carousel>
+
                 </div>
 
                 <div id="master-music-container">
@@ -105,20 +131,28 @@ const Art = () => {
                     </div>
 
                     <div className="carousel-container">
-                        {/* <Carousel> */}
+                        <Carousel
+                            showArrows={true}
+                            showIndicators={false}
+                            showThumbs={false}
+                            showStatus={false}
+                            autoPlay={true}
+                            infiniteLoop={true}
+                            interval={10000}
+                            swipeable={true}
+                        >
                             {musicPlayers.map( (data,index) =>{
                                 return(
-                                    
-                                    <div key={index}>
+                                    <div key={index} className="carousel-slide">
                                         <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src={data.src}></iframe>
-                                        <div className="sc-player">
+                                        {/* <div className="sc-player">
                                             <a href={data.profileURL} title={data.arist} target="_blank">rvsl -</a> 
                                             <a href={data.songURL} title={data.title} target="_blank">{data.title}</a>
-                                        </div>
+                                        </div> */}
                                     </div>
                                     )
                             })}
-                        {/* </Carousel> */}
+                        </Carousel>
                     </div>
 
                     <div className="content-child">
