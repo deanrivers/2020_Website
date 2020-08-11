@@ -12,6 +12,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-fontawesome": "^1.7.1",
+    "react-gradient": "^1.0.2",
     "react-hamburger-menu": "^1.2.1",
     "react-photo-gallery": "^8.0.0",
     "react-responsive-carousel": "^3.2.9",
@@ -26,7 +27,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "yarn run build",
-    "deploy":"gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,5 +1,6 @@
 import React , {useState} from 'react'
 import {useSpring,animated, useSprings} from 'react-spring'
+import {Gradient} from 'react-gradient'
 
 //images
 import apexImage from '../../assets/project-images/apex.jpg'
@@ -12,6 +13,11 @@ import reactImage from '../../assets/program-icons/react.jpg'
 
 
 const Coding = () =>{
+
+    const gradients = [
+        ['#bd19d6', '#ea7d10'],
+        ['#ff2121', '#25c668'],
+    ];
 
     const cardObj = [
         {
@@ -70,14 +76,21 @@ const Coding = () =>{
                 {cards.map( (item,index) => {
                     return(
                         <div className="card-child" key={index}>
-                            <p style={{fontSize:'2rem',fontWeight:'600'}}>{item.title}</p>
-                            <img src={item.image}/>
-                            <br/>
-                            <hr style={{border:' 1px solid #eaeade'}}/>
-                            <p className="card-child-description">{item.description}</p>
+                            <div className="card-title-container">
+                                <p style={{fontSize:'3rem',fontWeight:'600'}}>{item.title}</p>
+                            </div>
+                            
+                            <div className="card-image-container">
+                                <img width="120px" height="120px"  src={item.image}/>
+                            </div>
 
                             
-                            
+                            <br/>
+                            <hr style={{border:'1px solid #eaeade'}}/>
+                            <div className="card-child-description-container">
+                                <p className="card-child-description">{item.description}</p>    
+                            </div>
+
                             <div className="language-container">
                                 {item.languages.map( (item,index) => {
                                     return(
@@ -85,11 +98,17 @@ const Coding = () =>{
                                     )
                                 })}
                             </div>
-                            <button className="card-button"><a href={item.link} target="_blank">See More</a></button>
+                            <div className="card-button-container">
+                                <button className="card-button"><a href={item.link} target="_blank">See More</a></button>
+                            </div>
+                            
                         </div>
                     )
                 })}
             </div>
+
+            
+                            
 
     
 
