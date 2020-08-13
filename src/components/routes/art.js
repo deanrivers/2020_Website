@@ -66,6 +66,18 @@ const Art = () => {
         {
             src: require('../../assets/yv-images/15.jpg'),
         },
+        {
+            src: require('../../assets/yv-images/16.jpg'),
+        },
+        {
+            src: require('../../assets/yv-images/17.jpg'),
+        },
+        {
+            src: require('../../assets/yv-images/18.jpg'),
+        },
+        {
+            src: require('../../assets/yv-images/19.jpg'),
+        },
     ];
     const musicPlayers = [{
           artist:'rvsl',
