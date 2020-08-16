@@ -1,7 +1,9 @@
 import React from 'react'
-import Gallery from 'react-photo-gallery'
+
 import { useSpring,animated } from 'react-spring'
 import { Carousel } from 'react-responsive-carousel'
+import Lottie from 'react-lottie'
+
 
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -19,7 +21,6 @@ const Art = () => {
             opacity:'1'
         }
     })
-
     const photos = [
         {
             src: require('../../assets/yv-images/1.jpg'),
@@ -79,6 +80,22 @@ const Art = () => {
             src: require('../../assets/yv-images/19.jpg'),
         },
     ];
+
+    const animations = [{
+        defaultOptions:{
+            loop: true,
+            autoplay: true, 
+            animationData: require('../../assets/animations/data_1.json'),
+        }
+    },
+    {
+        defaultOptions:{
+            loop: true,
+            autoplay: true, 
+            animationData: require('../../assets/animations/data_2.json'),
+        },
+    }]
+
     const musicPlayers = [{
           artist:'rvsl',
           title:'What Day Is It',
@@ -133,6 +150,38 @@ const Art = () => {
 
                 </div>
 
+                    
+                <div id="master-animation-container">
+                    <div className="content-child">
+                        <p>Animations</p>
+                    </div>
+                    <div id="animation-section">
+                    {/* <Carousel
+                            showArrows={true}
+                            showIndicators={false}
+                            showThumbs={false}
+                            showStatus={false}
+                            autoPlay={true}
+                            infiniteLoop={true}
+                            interval={5000}
+                            swipeable={true}
+                        > */}
+                        {animations.map( (item,index) => {
+                            return(
+                                <div className="animation-children">
+                                    <Lottie options={item.defaultOptions}
+                                        key={index}
+                                        height={200}
+                                        width={200}
+                                    />
+                                </div>
+                                
+                            )
+                        })}
+                    {/* </Carousel> */}
+                    </div>
+                </div>
+
                 <div id="master-music-container">
                     <div className="content-child">
                         <p>Music</p>
@@ -150,7 +199,7 @@ const Art = () => {
                             showStatus={false}
                             autoPlay={true}
                             infiniteLoop={true}
-                            interval={10000}
+                            interval={5000}
                             swipeable={true}
                         >
                             {musicPlayers.map( (data,index) =>{
@@ -167,8 +216,10 @@ const Art = () => {
                         </Carousel>
                     </div>
 
+                
+
                     <div className="content-child">
-                        <p>Videos</p>
+                        <p>YouTube</p>
                     </div>
 
                     <div className="sub-categories">

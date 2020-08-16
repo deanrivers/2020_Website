@@ -3,9 +3,13 @@ import {useSpring, animated, config} from 'react-spring'
 import {NavLink} from 'react-router-dom'
 import Social from './socials'
 
+import Preloader from './preloader'
+
 
 
 const Home = () =>{
+
+    
 
     const fade = useSpring({
         from:{
@@ -101,20 +105,19 @@ const Home = () =>{
             {props.children}
           </div>
         );
-      }
+    }
 
 
 
-
-
-    return(
+    return([
+ 
         <animated.div className="page-container" style={fade}>
+            
             <div className="row" id="header">
                 <div className="title-container">
                     <div>
                         <p className="title">Dr<span className="dot-animation" style={{color:'#ff0044'}}>.</span>io</p>
                     </div>
-                    
                 </div>
                 
                 <div id="about-container">
@@ -208,6 +211,6 @@ const Home = () =>{
                 </div>
             </FadeInSection>
         </animated.div>
-    )
+    ])
 }
 export default Home
