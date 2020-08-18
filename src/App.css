@@ -9,7 +9,8 @@ html,body{
   background-color: #151515;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  margin: 0 auto
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 /* backgrounds */
@@ -69,7 +70,7 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top:15%;
+  margin-top:20%;
   margin-bottom:15%;
   flex-wrap: wrap;
 }
@@ -78,7 +79,7 @@ a{
   display: flex;
   flex-direction: row;
   justify-content: flex-start; 
-  align-items: center;
+  /* align-items: center; */
   width: 100%;
   font-size: 5rem;
   margin-top: 10%;
@@ -251,7 +252,7 @@ hr{
 }
 .sub-categories p{
   font-size: 1rem;
-  color: rgb(99, 99, 99);
+  color: rgb(142 142 142);
   margin: 0;
 }
 
@@ -644,6 +645,16 @@ footer{
   margin-left: 0;
   margin-top: 0;
   border: 0px solid #eaeade;
+}
+
+.keyword{
+  /* color: #fc1b62; */
+  font-weight: bold;
+  font-style: italic;
+  animation-name: dot;
+  animation-duration: 30s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 
 

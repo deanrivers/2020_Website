@@ -35,9 +35,9 @@ const Hamburger = () =>{
                 <div id="slidebar-list">
                     <NavLink to="/home"><div onClick={()=>menuItemClicked()} className="slidebar-menu-items" id="red-hover-ham"><p>/Home</p></div></NavLink>
                     <NavLink to="/coding"><div onClick={()=>menuItemClicked()} className="slidebar-menu-items" id="red-hover-ham"><p>/Coding</p></div></NavLink>
-                    <NavLink to="/art"><div onClick={()=>menuItemClicked()} className="slidebar-menu-items" id="blue-hover-ham"><p>/Art</p></div></NavLink>
-                    <NavLink to="/education"><div onClick={()=>menuItemClicked()} className="slidebar-menu-items" id="yellow-hover-ham"><p>/Education</p></div></NavLink>
-                    <NavLink to="/contact"><div onClick={()=>menuItemClicked()} className="slidebar-menu-items" id="green-hover-ham"><p>/Contact</p></div></NavLink>
+                    <NavLink to="/art"><div onClick={()=>menuItemClicked()} className="slidebar-menu-items" id="green-hover-ham"><p>/Art</p></div></NavLink>
+                    {/* <NavLink to="/education"><div onClick={()=>menuItemClicked()} className="slidebar-menu-items" id="yellow-hover-ham"><p>/Education</p></div></NavLink> */}
+                    <NavLink to="/contact"><div onClick={()=>menuItemClicked()} className="slidebar-menu-items" id="blue-hover-ham"><p>/Contact</p></div></NavLink>
                 </div>
             </div>
         </animated.div>

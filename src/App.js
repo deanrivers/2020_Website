@@ -20,40 +20,34 @@ import Preloader from './components/preloader'
 
 const App = () => {
 
-  useState(()=>{
-    console.log('hi')
-  },[])
-
   const [preloaderActive,updatePreloader] = useState(true)
 
   const preLoaderRender = preloaderActive?<Preloader/>:null
 
   useEffect( () => {
+      //set preloader to false after 3s
       setTimeout( ()=>{
-          // updatePreloader(false)
-          // document.getElementById('preloader-container').classList.add('preloader-hide')
-          const el = $('#preloader-container')
+        updatePreloader(false)
+        document.getElementsByTagName('html')[0].style.overflow = 'scroll'
+        
+        //remove preloader from dom after 2s
+        setTimeout(()=>{
           const elem = document.getElementById('preloader-container')
-          
-          //fade element away
-          // el.classList.add('preloader-hide')
-          el.fadeOut('fast')
-          
-          
-          
-
-
-          
-          // elem.parentNode.removeChild(elem)
+          elem.parentNode.removeChild(elem)
+        },2000)
       },3000)
   },[])
 
-  const opacity = useSpring({opacity:1})
+
+  // const opacity = useSpring({opacity:preloaderActive?1:0})
+  const opacity = useSpring({opacity:preloaderActive?1:0})
+
+  
 
   
 
   return ([
-    <animated.div id="preloader-container">
+    <animated.div id="preloader-container" style={opacity}>
       {preLoaderRender}
     </animated.div>,
     
@@ -63,7 +57,7 @@ const App = () => {
         <Route path="/home" component={Home}/>
         <Route path="/coding" component={Coding}/>
         <Route path="/art" component={Art}/>
-        <Route path="/education" component={Education}/>
+        {/* <Route path="/education" component={Education}/> */}
         <Route path="/contact" component={Contact}/>
 
         <Route exact path="/2020_Website">
