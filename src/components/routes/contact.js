@@ -41,7 +41,6 @@ const Contact = () =>{
 
     const submitPressed = () =>{
         console.log(name,email,message)
-
         firebase
         .database()
         .ref("Visitors/" + name)
@@ -58,24 +57,31 @@ const Contact = () =>{
             <div className="title-container">
                 <p className="title"><span className="green">/</span>Contact</p>
             </div>
-            <div className="form-container">
-                <div className="field-container">
-                    <input type="text" placeholder="Name*" maxLength="40" value={name} onChange={(e)=>updateName(e.target.value)}/>
-                </div>
 
-                <div className="field-container">
-                    <input type="text" placeholder="Email*" maxLength="40" value={email} onChange={(e)=>updateEmail(e.target.value)}/>
-                </div>
-                <div className="field-container">
-                    <p>Message*</p>
-                    <textarea onChange={(e)=>updateMessage(e.target.value)}></textarea>
-                </div>
-
-                <button onClick={()=>submitPressed()} id="submit-button">Submit</button>
+            <div className="container">
+                {/* <form onSubmit={(e)=>submitPressed(e)}> */}
                 
+                    <div class="group">      
+                        <input type="text" required maxLength="40" value={name} onChange={(e)=>updateName(e.target.value)}/>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Name*</label>
+                    </div>
+
+                    <div class="group">      
+                        <input type="text" required maxLength="40" value={email} onChange={(e)=>updateEmail(e.target.value)}/>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Email*</label>
+                    </div>
+                  
+                    <div className="field-container">
+                        <p>Message*</p>
+                        <textarea onChange={(e)=>updateMessage(e.target.value)}></textarea>
+                    </div>
+                    <button onClick={()=>submitPressed()} id="submit-button">Submit</button>
+                {/* </form> */}
             </div>
-
-
         </animated.div>
     )
 }

@@ -87,7 +87,6 @@ const Home = () =>{
         },
         delay:400
     })
-
     const FadeInSection = (props) => {
         const [isVisible, setVisible] = React.useState(false);
         const domRef = React.useRef();
@@ -107,20 +106,15 @@ const Home = () =>{
         );
     }
 
-
-
     return([
  
         <animated.div className="page-container" style={fade}>
-            
             <div className="row" id="header">
                 <div className="title-container">
                     <div>
                         <p className="title">Dr<span className="dot-animation" style={{color:'#ff0044'}}>.</span>io</p>
                     </div>
                 </div>
-                
-                
             </div>
             {/* <hr/> */}
 
@@ -140,8 +134,6 @@ const Home = () =>{
                 {/* <animated.div id="education" className="nav-child" style={slideIn3}>
                     <div>
                         <NavLink to="/education"><p className="link" id="yellow-hover">/Education</p></NavLink>
-                
-                        
                     </div>
                 </animated.div> */}
 
