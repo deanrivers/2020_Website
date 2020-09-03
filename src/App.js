@@ -9,7 +9,6 @@ import Art from './components/routes/art'
 import Hamburger from './components/hamburger'
 import Coding from './components/routes/coding'
 import Contact from './components/routes/contact'
-import Education from './components/routes/education'
 import Social from './components/socials'
 import Footer from './components/footer'
 import Preloader from './components/preloader'
@@ -17,13 +16,20 @@ import Preloader from './components/preloader'
 const App = () => {
 
   const [preloaderActive,updatePreloader] = useState(true)
-
   const preLoaderRender = preloaderActive?<Preloader/>:null
 
   useEffect( () => {
+
+      //scroll to top
+
+
       //set preloader to false after 3s
       setTimeout( ()=>{
+        
+        // console.log('reload')
         updatePreloader(false)
+        window.scrollTo(0,0);
+
         document.getElementsByTagName('html')[0].style.overflow = 'scroll'
         
         //remove preloader from dom after 2s

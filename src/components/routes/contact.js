@@ -60,7 +60,6 @@ const Contact = () =>{
 
             <div className="container">
                 {/* <form onSubmit={(e)=>submitPressed(e)}> */}
-                
                     <div class="group">      
                         <input type="text" required maxLength="40" value={name} onChange={(e)=>updateName(e.target.value)}/>
                         <span class="highlight"></span>

@@ -9,6 +9,7 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import Youtube from '../youtube'
+import Twitch from '../twitch';
  
 
 const Art = () => {
@@ -217,20 +218,36 @@ const Art = () => {
                     </div>
 
                 
+                    
 
+
+                        
+                    
+
+                </div>
+
+                <div id="youtube-parent-container">
                     <div className="content-child">
                         <p>YouTube</p>
                     </div>
 
                     <div className="sub-categories">
-                        <a href="https://www.youtube.com/user/dustierthunder/" target="_blank"><p>Watch on YouTube</p></a>
+                        <a href="https://www.youtube.com/user/dustierthunder/" target="_blank"><p id="youtube-link">Watch on YouTube</p></a>
+                    </div>
+                    <Youtube/>
+                </div>
+                    
+                <div id="twitch-parent-container">
+                    <div className="content-child">
+                        <p>Twitch</p>
                     </div>
 
-                    <Youtube/>
-                        
-                    
-
+                    <div className="sub-categories">
+                        <a href="https://www.twitch.tv/deanrivers" target="_blank"><p id="twitch-link">Watch on Twitch</p></a>
+                    </div>
+                    <Twitch/>
                 </div>
+
             </div>
         </animated.div>
     )

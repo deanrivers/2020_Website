@@ -9287,6 +9287,13 @@ react-spring@^8.0.27:
     "@babel/runtime" "^7.3.1"
     prop-types "^15.5.8"
 
+react-twitch-embed-video@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/react-twitch-embed-video/-/react-twitch-embed-video-2.0.4.tgz#60096a1caabb0c6d240d53c503ba29ac87f2d03e"
+  integrity sha512-0gNIyY1l9tHBzkWGaDCM0P4tRH2EuxDka0g4znckrztitO06ddoLfAxilCjMYxatRjdGLV38yQuE50nVvIv6GA==
+  dependencies:
+    window-or-global "^1.0.1"
+
 react@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
@@ -11248,6 +11255,11 @@ which@^2.0.1:
   integrity sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
   dependencies:
     isexe "^2.0.0"
+
+window-or-global@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/window-or-global/-/window-or-global-1.0.1.tgz#dbe45ba2a291aabc56d62cf66c45b7fa322946de"
+  integrity sha1-2+RboqKRqrxW1iz2bEW3+jIpRt4=
 
 word-wrap@~1.2.3:
   version "1.2.3"

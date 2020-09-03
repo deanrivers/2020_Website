@@ -5,11 +5,10 @@ import Social from './socials'
 
 import Preloader from './preloader'
 
+import FadeInSection from './common/fadeInSection'
 
 
 const Home = () =>{
-
-    
 
     const fade = useSpring({
         from:{
@@ -87,24 +86,7 @@ const Home = () =>{
         },
         delay:400
     })
-    const FadeInSection = (props) => {
-        const [isVisible, setVisible] = React.useState(false);
-        const domRef = React.useRef();
-        React.useEffect(() => {
-          const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => setVisible(entry.isIntersecting));
-          });
-          observer.observe(domRef.current);
-        }, []);
-        return (
-          <div
-            className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
-            ref={domRef}
-          >
-            {props.children}
-          </div>
-        );
-    }
+    
 
     return([
  
@@ -147,41 +129,29 @@ const Home = () =>{
             <FadeInSection>
                 <div>
                     <hr style={{border:'3px solid rgb(99, 99, 99)',opacity:'1'}}/>
-                    <p id="page-break-text">Engineer. Creative.</p>
+                    <p id="page-break-text">Engineer<span className="dot-animation" style={{color:'#ff0044'}}>.</span> Creative<span className="dot-animation" style={{color:'#ff0044'}}>.</span></p>
                     <hr style={{border:'3px solid rgb(99, 99, 99)',opacity:'1'}}/>
                 </div>
             </FadeInSection>
-
+            
             <FadeInSection>
                 <div className="row">
                     <div>
                         <p>About</p>
                         <div className="sub-categories">
-                            {/* <p>Me / What I'm Into</p> */}
-                            {/* <hr style={{marginTop:'0'}}/> */}
+
                             <p>As a natural thinker and asker of questions, I have always been fascinated with the idea of
                                 <span className="keyword">technology</span> and humans harmoniously coexisting in a fast-paced, increasingly-digital world.
                                 Throughout my life I have always been enamored with engineering, design and development;
                                 all of which have helped shape me into the <span className="keyword">creative-engineer-designer-artsy</span> human being I am today.
                                 Discovering new ways to do everyday things is my hobby, implementing them and watching something I
                                 have created being used by others in a positive way is part of my <span className="keyword">passion</span>.</p>
-                            <br/>
-                            <p>I am a <span className="keyword">front end</span> developer/programmer, designer and innovative creator with a BE in Mechanical
-                                Engineering from the <span className="keyword">Stevens Institute of Technology</span> located in the heart of Hoboken, NJ. I also
-                                enjoy playing soccer, making music and creating cool animations.</p>
-
-                            <p>Everyday is an <span className="keyword">opportunity</span> for me to develop and build on my knowledge of front-end metgodologies and
-                                techniques while also fine-tuning my soft skills as a people-person. Both of these elements go hand-in-hand
-                                and are crucial for sustainable improvement and <span className="keyword">self-growth</span>.
-                            </p>
                         </div>
                     </div>
 
                     <div>
-                        <p>Notable Stuff</p>
+                        <p>Other Stuff</p>
                         <div className="sub-categories">
-                            {/* <p>Classes / Giving Back</p> */}
-                            {/* <hr style={{marginTop:'0'}}/> */}
                             <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
                                 It has roots in a piece of classical Latin literature from 45 BC,
                                 making it over 2000 years old. Richard McClintock, a Latin professor
