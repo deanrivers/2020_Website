@@ -1,33 +1,41 @@
 import React from 'react'
-import FontAwesome from 'react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
- 
+// let icons = ['youtube','twitch','github','instagram']
+
+
+let icons =[
+    {
+        icon:'youtube',
+        link:'https://www.youtube.com/user/dustierthunder/'
+    },
+    {
+        icon:'twitch',
+        link:'https://www.twitch.tv/deanrivers'
+    },
+    {
+        icon:'github',
+        link:'https://github.com/deanrivers/'
+    },
+    {
+        icon:'instagram',
+        link:'https://www.instagram.com/deanrivers.io/'
+    }
+]
 
 const Social = () =>{
+
     return(
         <div id="social-container">
-            <FontAwesome
-                name="instagram"
-                className='fa-icon'
-                size="1x"
-                spin={false}
-                style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-            />
-            
-            <FontAwesome
-                name="github"
-                className='fa-icon'
-                size='2x'
-                spin={false}
-                style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-            />
-            <FontAwesome
-                name="youtube"
-                className='fa-icon'
-                size="1x"
-                spin={false}
-                style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-            />
+            {icons.map( (item,index)=>{
+                return(
+                    <div className="social-icon-child" key={index}>
+                        <a href={item.link} target="_blank">
+                            <FontAwesomeIcon icon={['fab', `${item.icon}`]} />
+                        </a>
+                    </div>
+                )
+            })}
         </div>
     )
 }

@@ -13,6 +13,14 @@ import Social from './components/socials'
 import Footer from './components/footer'
 import Preloader from './components/preloader'
 
+//font awesome
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+library.add(fab,faCoffee)
+
+
+
 const App = () => {
 
   const [preloaderActive,updatePreloader] = useState(true)

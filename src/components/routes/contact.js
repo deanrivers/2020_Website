@@ -4,6 +4,8 @@ import firebase from 'firebase'
 import {v4 as uuidv4} from 'uuid'
 import $ from 'jquery'
 
+import Social from '../socials'
+
 // var firebase = require("firebase");
 //var uuid = require("uuid");
 
@@ -26,7 +28,7 @@ const Contact = () =>{
     const [name,updateName] = useState('')
     const [email,updateEmail] = useState('')
     const [message,updateMessage] = useState('')
-    const [formSubmiited,updateFormSubmitted] = useState(true)
+    const [formSubmiited,updateFormSubmitted] = useState(false)
     
     const fade = useSpring({
         from:{
@@ -113,17 +115,17 @@ const Contact = () =>{
             </div>
 
             <div className="container">
-                <div class="group">      
-                    <input id="name-input" type="text" required maxLength="40" value={name} onChange={(e)=>updateName(e.target.value.replace(/^\s+/g, ''))}/>
-                    <span class="highlight"></span>
-                    <span class="bar"></span>
-                    <label>Name*</label>
+                <div className="group">      
+                    <input id="name-input" type="text" required maxLength="40" value={name} onChange={(e)=>updateName(e.target.value.trim())}/>
+                    <span className="highlight"></span>
+                    <span className="bar"></span>
+                    <label>First Name*</label>
                 </div>
 
-                <div class="group">      
+                <div className="group">      
                     <input id="email-input" type="text" required maxLength="40" value={email} onChange={(e)=>updateEmail(e.target.value.trim())}/>
-                    <span class="highlight"></span>
-                    <span class="bar"></span>
+                    <span className="highlight"></span>
+                    <span className="bar"></span>
                     <label>Email*</label>
                 </div>
                 
@@ -136,8 +138,9 @@ const Contact = () =>{
         </animated.div>
         :
         <animated.div className="page-container thanks-container" style={fade}>
-            <h1>Thanks for your message!</h1>
-            <h1>Remember to follow the below!</h1>
+            <p>Thank you for your message!</p>
+            <p>Your message is in a database somewhere in the sky.</p>
+            <Social/>
         </animated.div>
 
     )
