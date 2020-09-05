@@ -19,10 +19,6 @@ const App = () => {
   const preLoaderRender = preloaderActive?<Preloader/>:null
 
   useEffect( () => {
-
-      //scroll to top
-
-
       //set preloader to false after 3s
       setTimeout( ()=>{
         
@@ -32,21 +28,18 @@ const App = () => {
 
         document.getElementsByTagName('html')[0].style.overflow = 'scroll'
         
+        const elem = document.getElementById('preloader-container')
+        elem.parentNode.removeChild(elem)
+
         //remove preloader from dom after 2s
         setTimeout(()=>{
-          const elem = document.getElementById('preloader-container')
-          elem.parentNode.removeChild(elem)
+          // const elem = document.getElementById('preloader-container')
+          // elem.parentNode.removeChild(elem)
         },2000)
       },3000)
   },[])
 
-
-  // const opacity = useSpring({opacity:preloaderActive?1:0})
   const opacity = useSpring({opacity:preloaderActive?1:0})
-
-  
-
-  
 
   return ([
     <animated.div id="preloader-container" style={opacity}>

@@ -14,7 +14,7 @@ const Preloader = () =>{
         <Lottie options={defaultOptions}
             height={500}
             width={500}
-            />
+        />
     )
 }
 
