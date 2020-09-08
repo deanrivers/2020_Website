@@ -20,6 +20,9 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 library.add(fab,faCoffee)
 
 
+require('dotenv').config()
+
+
 
 const App = () => {
 
@@ -60,8 +63,8 @@ const App = () => {
         <Route path="/home" component={Home}/>
         <Route path="/coding" component={Coding}/>
         <Route path="/art" component={Art}/>
-        {/* <Route path="/education" component={Education}/> */}
         <Route path="/contact" component={Contact}/>
+        <Route path="" component={Home}/>
 
         <Route exact path="/2020_Website">
           <Redirect to="/" />
@@ -70,7 +73,7 @@ const App = () => {
       </Switch>
       <Hamburger/>
     </Router>,
-    <Footer/>
+    // <Footer/>
     
 
 

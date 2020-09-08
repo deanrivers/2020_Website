@@ -11,39 +11,45 @@ import ninjaImage from '../../assets/project-images/ninja.png'
 import pythonImage from '../../assets/program-icons/python.png'
 import reactImage from '../../assets/program-icons/react.jpg'
 
-
 const Coding = () =>{
 
     const gradients = [
         ['#bd19d6', '#ea7d10'],
         ['#ff2121', '#25c668'],
     ];
+    
 
-    const cardObj = [
+    const technologies = [
         {
-            title:'Apex Stats Bot',
+            name:'react',
+            icon:''
+        },
+
+    ]
+
+    const projectsInfo = [
+        {
+            title:'Apex Bot',
             image:apexImage,
-            description:'The Apex Legends Stats Twitter Bot provides player statistics based on information provided in a receieved tweet/mention. This bot currently lives on a Raspberry Pi and was built using Python & RESTful APIs.',
-            link:'',
+            description:'The Apex Legends Stats Bot provides player statistics via the Apex Tracker Network API. This bot currently lives on a Raspberry Pi and was built using Python. Gice it a try!',
+            link:'https://twitter.com/ApexLegendsBot',
             languages:[pythonImage]
         },
         {
             title:'Local Pitch',
             image:localPitchImage,
-            description:"The Local Pitch mobile application (iOS) will be used to find nearby soccer fields based on the user's current device location. The application is currently in closed beta testing. Please feel free to reach out if you are interested in downloading this application.",
+            description:"The Local Pitch mobile application (iOS) will be used to find nearby soccer fields based on the user's current device location. The application is currently in closed beta testing.",
             link:'',
             languages:[reactImage]
         },
         {
             title:'Decoded',
             image:ninjaImage,
-            description:'Common misconception: "Coding is too hard for me to learn!". Decoded is dedicated in breaking that stigma. Decoded is also dedicated to helping local businesses get their brands and names on the web.',
+            description:'Common misconception: "Coding is too hard for me to learn!" Decoded is dedicated in breaking that stigma with the use of engaging posts and online classes.',
             link:'https://decoded.ninja/',
             languages:[]
         },
-]
-
-    const [cards,updateCards] = useState(cardObj)
+    ]
 
     const fade = useSpring({
         from:{
@@ -67,40 +73,32 @@ const Coding = () =>{
                 <p>Projects</p>
             </div>
 
-            <div className="sub-categories">
+            {/* <div className="sub-categories">
                 <p>Bots / Scripts / Web Development</p>
-            </div>
+            </div> */}
 
             <div className="main-card-container">
-                
-                {cards.map( (item,index) => {
+                {projectsInfo.map( (item,index) => {
                     return(
                         <div className="card-child" key={index}>
                             <div className="card-title-container">
-                                <p style={{fontSize:'3rem',fontWeight:'600'}}>{item.title}</p>
+                                <p style={{fontSize:'3rem',fontWeight:'400'}}>{item.title}</p>
                             </div>
                             
                             <div className="card-image-container">
-                                <img width="120px" height="120px"  src={item.image}/>
+                                <a href={item.link} target="_blank">
+                                    <img width="120px" height="120px"  src={item.image}/>
+                                </a>
                             </div>
-
                             
-                            <br/>
-                            <hr style={{border:'1px solid #eaeade'}}/>
+                            {/* <hr style={{border:'1px solid #eaeade'}}/> */}
                             <div className="card-child-description-container">
-                                <p className="card-child-description">{item.description}</p>    
+                                <p style={{fontWeight:'300'}} className="card-child-description">{item.description}</p>    
                             </div>
 
-                            <div className="language-container">
-                                {item.languages.map( (item,index) => {
-                                    return(
-                                        <img src={item} key={index} className="card-language-image"/>
-                                    )
-                                })}
-                            </div>
-                            <div className="card-button-container">
+                            {/* <div className="card-button-container">
                                 <button className="card-button"><a href={item.link} target="_blank">See More</a></button>
-                            </div>
+                            </div> */}
                             
                         </div>
                     )

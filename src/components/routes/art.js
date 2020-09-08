@@ -10,6 +10,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import Youtube from '../youtube'
 import Twitch from '../twitch';
+import FadeInSection from '../common/fadeInSection'
  
 
 const Art = () => {
@@ -115,12 +116,13 @@ const Art = () => {
     ]
     return(
         <animated.div className="page-container" style={fade}>
-            <div className="title-container">
-                <p className="title"><span className="blue">/</span>Art</p>
-            </div>
-
+            <FadeInSection>
+                <div className="title-container">
+                    <p className="title"><span className="green">/</span>Art</p>
+                </div>
+            </FadeInSection>
             <div className="master-content-container">
-
+            <FadeInSection>
                 <div id="photo-container">
                     <div className="content-child">
                         <p>Photography</p>
@@ -129,7 +131,6 @@ const Art = () => {
                     <div className="sub-categories">
                         <a href="https://instagram.com/your.vue" target="_blank"><p>Follow on Instagram</p></a>
                     </div>
-                    {/* <Gallery photos={photos} direction="row"/> */}
                     <Carousel
                         showArrows={true}
                         showIndicators={false}
@@ -148,41 +149,12 @@ const Art = () => {
                             )
                         })}
                     </Carousel>
-
                 </div>
+            </FadeInSection>
 
-                    
-                <div id="master-animation-container">
-                    <div className="content-child">
-                        <p>Animations</p>
-                    </div>
-                    <div id="animation-section">
-                    {/* <Carousel
-                            showArrows={true}
-                            showIndicators={false}
-                            showThumbs={false}
-                            showStatus={false}
-                            autoPlay={true}
-                            infiniteLoop={true}
-                            interval={5000}
-                            swipeable={true}
-                        > */}
-                        {animations.map( (item,index) => {
-                            return(
-                                <div className="animation-children">
-                                    <Lottie options={item.defaultOptions}
-                                        key={index}
-                                        height={200}
-                                        width={200}
-                                    />
-                                </div>
-                                
-                            )
-                        })}
-                    {/* </Carousel> */}
-                    </div>
-                </div>
-
+            
+            
+            <FadeInSection>
                 <div id="master-music-container">
                     <div className="content-child">
                         <p>Music</p>
@@ -216,16 +188,10 @@ const Art = () => {
                             })}
                         </Carousel>
                     </div>
-
-                
-                    
-
-
-                        
-                    
-
                 </div>
+            </FadeInSection>
 
+            <FadeInSection>
                 <div id="youtube-parent-container">
                     <div className="content-child">
                         <p>YouTube</p>
@@ -236,7 +202,10 @@ const Art = () => {
                     </div>
                     <Youtube/>
                 </div>
-                    
+            </FadeInSection>
+
+            <FadeInSection>
+
                 <div id="twitch-parent-container">
                     <div className="content-child">
                         <p>Twitch</p>
@@ -247,6 +216,7 @@ const Art = () => {
                     </div>
                     <Twitch/>
                 </div>
+            </FadeInSection>
 
             </div>
         </animated.div>

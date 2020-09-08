@@ -22,10 +22,10 @@ const Hamburger = () =>{
                 isOpen={hamburgerToggle}
                 menuClicked={()=>updateHamburger(!hamburgerToggle)}
                 width={30}
-                height={20}
-                strokeWidth={3}
+                height={30}
+                strokeWidth={2}
                 rotate={0}
-                color='#eaeade'
+                color='black'
                 borderRadius={0}
                 animationDuration={0.5}
             />
@@ -33,7 +33,7 @@ const Hamburger = () =>{
         <animated.div id="hamburger-slide-container" className="ham-nav-items" style={hamburgerSlide}>
             <div className="slidebar-list-container">
                 <div id="slidebar-list">
-                    <NavLink to="/home"><div onClick={()=>menuItemClicked()} className="slidebar-menu-items" id="red-hover-ham"><p>/Home</p></div></NavLink>
+                    <NavLink to="/home"><div onClick={()=>menuItemClicked()} className="slidebar-menu-items" id="yellow-hover-ham"><p>/Home</p></div></NavLink>
                     <NavLink to="/coding"><div onClick={()=>menuItemClicked()} className="slidebar-menu-items" id="red-hover-ham"><p>/Coding</p></div></NavLink>
                     <NavLink to="/art"><div onClick={()=>menuItemClicked()} className="slidebar-menu-items" id="green-hover-ham"><p>/Art</p></div></NavLink>
                     {/* <NavLink to="/education"><div onClick={()=>menuItemClicked()} className="slidebar-menu-items" id="yellow-hover-ham"><p>/Education</p></div></NavLink> */}

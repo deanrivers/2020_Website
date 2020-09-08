@@ -6,22 +6,22 @@ import $ from 'jquery'
 
 import Social from '../socials'
 
-// var firebase = require("firebase");
+//let firebase = require("firebase");
 //var uuid = require("uuid");
 
 //google firebase
-const config = {
-    apiKey: "AIzaSyDI-uQn3OsQ7Xxj-bYgWm-_WP9hQy_jLR4",
-    authDomain: "website-75fd6.firebaseapp.com",
-    databaseURL: "https://website-75fd6.firebaseio.com",
-    projectId: "website-75fd6",
-    storageBucket: "website-75fd6.appspot.com",
-    messagingSenderId: "875662301345",
-    appId: "1:875662301345:web:559c574e1f0e1cc567b8e0",
-    measurementId: "G-HCBVB9N599"
-};
+const firebaseConfig = {
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+    databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID ,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FIREBASE_APP_ID,
+    measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
+  };
 
-firebase.initializeApp(config);
+firebase.initializeApp(firebaseConfig);
 
 const Contact = () =>{
 
@@ -111,7 +111,7 @@ const Contact = () =>{
     return(!formSubmiited?
         <animated.div className="page-container" style={fade}>
             <div className="title-container">
-                <p className="title"><span className="green">/</span>Contact</p>
+                <p className="title"><span className="blue">/</span>Contact</p>
             </div>
 
             <div className="container">
