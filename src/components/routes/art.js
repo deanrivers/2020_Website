@@ -98,7 +98,15 @@ const Art = () => {
         },
     }]
 
-    const musicPlayers = [{
+    const musicPlayers = [
+        {
+            artist:'rvsl',
+            title:'You Say',
+            src:'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/893329795&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true',
+            profileURL:'https://soundcloud.com/rvsl',
+            songURL:'https://soundcloud.com/rvsl/you-say'
+        },
+        {
           artist:'rvsl',
           title:'What Day Is It',
           src:'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/857454568&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true',

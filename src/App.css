@@ -466,6 +466,10 @@ hr{
   display: none;
 }
 
+#twitch-parent-container{
+  margin-bottom: 5%;
+}
+
 .child-music-container{
   margin-bottom: 5%;
 }
