@@ -6,6 +6,7 @@ import {Gradient} from 'react-gradient'
 import apexImage from '../../assets/project-images/apex.jpg'
 import localPitchImage from '../../assets/project-images/local_pitch.png'
 import ninjaImage from '../../assets/project-images/ninja.png'
+import rumImage from '../../assets/project-images/rum_and_beer.png'
 
 //language images
 import pythonImage from '../../assets/program-icons/python.png'
@@ -49,6 +50,13 @@ const Coding = () =>{
             link:'https://decoded.ninja/',
             languages:[]
         },
+        {
+            title:'Rum & Beer',
+            image:rumImage,
+            description:'The Rum & Beer Draft League is a unique experience where players are drafted to a soccer team. Match standings, player stats and FUT Cards are all displayed on the league website.',
+            link:'https://nydraft.com',
+            languages:[reactImage]
+        },
     ]
 
     const fade = useSpring({
@@ -73,9 +81,9 @@ const Coding = () =>{
                 <p>Projects</p>
             </div>
 
-            {/* <div className="sub-categories">
+            <div className="sub-categories">
                 <p>Bots / Scripts / Web Development</p>
-            </div> */}
+            </div>
 
             <div className="main-card-container">
                 {projectsInfo.map( (item,index) => {
@@ -95,10 +103,6 @@ const Coding = () =>{
                             <div className="card-child-description-container">
                                 <p style={{fontWeight:'300'}} className="card-child-description">{item.description}</p>    
                             </div>
-
-                            {/* <div className="card-button-container">
-                                <button className="card-button"><a href={item.link} target="_blank">See More</a></button>
-                            </div> */}
                             
                         </div>
                     )
